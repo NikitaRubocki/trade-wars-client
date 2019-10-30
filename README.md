@@ -1,3 +1,3 @@
 # trade-wars-client
 
-Another game for school
+Offical repository for TradeWars client server.
