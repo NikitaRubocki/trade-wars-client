@@ -1,0 +1,8 @@
+.header{
+	display: inline;
+	margin-right: 200px;
+}
+
+.headerDiv{
+	border-bottom: 5px solid black;
+}
