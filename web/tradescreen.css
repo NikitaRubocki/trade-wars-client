@@ -1,8 +1,44 @@
-.header{
+.header {
 	display: inline;
 	margin-right: 200px;
 }
 
-.headerDiv{
+.headerDiv {
 	border-bottom: 5px solid black;
+}
+
+.flux {
+	display: inline;
+	margin-right: 5px;
+}
+
+.maf {
+	display: inline;
+	margin-right: 5px;
+}
+
+.bc {
+	display: inline;
+	margin-right: 5px;
+}
+
+.ferengi {
+	display: inline;
+	margin-right: 5px;
+}
+
+.stationTitle {
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+
+.buy {
+	display: inline-block;
+	width: 48%;
+}
+
+.pawn {
+	display: inline-block;
+	width: 48%;
+	float: right;
 }
