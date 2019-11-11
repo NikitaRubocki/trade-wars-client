@@ -1,18 +1,22 @@
 body {
    text-align: center;
    margin: 25%;
-   background-image: url("../web/Images/star-trek-2.jpg");
+   background-image: url("../web/Images/star-trek-1.jpg");
 
 }
 
 h1 {
    font-family: startrek;
-   font-size: 400%;
+   font-size: 650%;
+   color: whitesmoke;
+   text-shadow: -10px -10px 0 coral, 10px -10px 0 coral, -10px 10px 0 coral, 10px 10px 0 coral;
+   /* color: whitesmoke; */
+   opacity: 70%;
 }
 
 .inline {
    display: inline;
-   margin-right: 5%;
+   /* margin-right: 5%; */
 }
 
 @font-face {
