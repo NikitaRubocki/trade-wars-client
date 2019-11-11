@@ -8,172 +8,138 @@
     <button class="tradeButton" onclick="window.location.href='tradescreen.html';">Trade!</button>
 
     <meta charset="UTF-8">
-    <style>
-        .box {
-            display: inline-block
-        }
-        .grid-title {
-            border-color: white;
-            background-color: white;
-            color: red;
-            text-align: center;
-            font-size: 30pt;
-            width: 500px;
-            grid-area: 1 / 1 / 1 / 11;
-        }
-        .grid-container {
-            width: 500px;
-            height: 500px;
-            display: grid;
-            /* display: inline-block; */
-            float: left;
-            margin-right: 200px;
-            background-color: grey;
-            padding: 10px;
-        }
-        .grid-cell {
-            background-color: black;
-            text-align: center;
-            width: auto;
-            height: auto;
-        }
-        .cargo-container {
-            width: 300px;
-            height: 400px;
-            display: grid;
-            /* display: inline-block; */
-            grid-template-columns: auto;
-            grid-column-gap: 2px;
-            grid-row-gap: 2px;
-            background-color: grey;
-            padding: 10px;
-        }
-        .cargo-title {
-            background-color: rgb(59, 59, 59);
-            width: auto;
-            font-style: bold;
-        }
-        .cargo-cell {
-            background-color: rgb(100, 100, 100);
-            text-align: left;
-            width: auto;
-            height: auto;
-        }
-
-    </style>
 </head>
 <body>
 
     <h1>TradeWars!</h1>
-    <div class="box">
-        <div class="grid-container">
-            <div class="grid-title">Space Grid</div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>  
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-        </div>
-        <div class="cargo-container">
-            <div class="cargo-title"> Cargo</div>
-            <div class="cargo-cell">Bullet</div>
-            <div class="cargo-cell">Spacesuit</div> 
-        </div>
+    <div class="box"></div>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div class="cargo-container">
+        <div class="cargo-title"> Cargo</div>
+        <div class="cargo-cell">Bullet</div>
+        <div class="cargo-cell">Spacesuit</div> 
     </div>
 </body>
 </html>
