@@ -1,7 +1,7 @@
 // Chevelle Boyer
 // Nikita Rubocki
 
-// package main
+package main
 
 // func main () {
 
