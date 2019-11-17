@@ -1,5 +1,5 @@
 body {
-	background-color: black;
+	background-image: url("../web/Images/stars-1.jpg");
 }
 h1 {
 	color: white;
@@ -48,3 +48,8 @@ td {
 	font-size: 50px;
 	float: right;
 }
+
+@font-face {
+    font-family: startrek;
+    src: url("../web/Fonts/TNG_Title.ttf");
+ }
