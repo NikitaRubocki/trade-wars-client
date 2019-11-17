@@ -16,6 +16,7 @@ body {
 .status {
     font-family: startrek;
     font-size: 150%;
+    text-align: center;
     float: right;
     margin-bottom: 2%;
     width: 50%;
