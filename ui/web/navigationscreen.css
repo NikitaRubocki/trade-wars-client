@@ -24,62 +24,52 @@ body {
     color: white;
 }
 
-
-/* .box {
-    border: 3px solid white;
-} */
-
-table {
+.grid {
 	float: left;
 	width: 50%;
     margin: 2%;
     padding: 10%;
+    border: 5px ridge rgb(124, 236, 120);
     border-collapse: collapse;
-    background-color: black;
-    box-shadow: 0px 0px 20px 20px rgb(124, 236, 120);
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 1px 25px 20px rgb(124, 236, 120);
 }
 
-caption {
+.grid-caption {
     font-family: startrek;
     font-size: 300%;
     color: white
 }
 
-td {
+.grid-td {
 	width: 50px;
     height: 50px;
+    border: 5px ridge rgb(124, 236, 120);
     box-shadow: 0px 0px 10px 5px rgba(124, 236, 120, .7);
 }
 
-table, td {
-    border: 5px ridge rgb(124, 236, 120);
-}
-
-
-.cargo-container {
+.cargo {
     width: 40%;
     height: 300px;
-    margin-top: 5%;
-    margin-right: 3%;
-    display: grid;
+    margin-top: 7%;
+    margin-right: 2%;
     float: right;
-    grid-template-columns: auto;
-    grid-column-gap: 3px;
-    grid-row-gap: 3px;
-    background-color: grey;
-    padding: 3px;
+    border-collapse: collapse;
+    background-color: black;
+    
 }
 
-.cargo-title {
-    background-color: rgb(59, 59, 59);
-    width: auto;
-    font-style: bold;
+.cargo-caption {
+    font-family: startrek;
+    font-size: 300%;
+    color: white
 }
-.cargo-container > div {
-    background-color: rgb(20, 20, 20);
-    text-align: left;
-    width: auto;
-    height: auto;
+
+.cargo-td {
+    width: 40%;
+    height: 50px;
+    border: 5px ridge rgb(124, 236, 120);
+    padding: 3px;
 }
 
 @font-face {
