@@ -66,10 +66,10 @@ body {
 }
 
 .cargo-td-item {
-    font-family: startrek;
+    font-family: startrek2;
     width: 40%;
     height: 50px;
-    font-size: 120%;
+    font-size: 150%;
     border: 4px ridge rgb(124, 236, 120);
     border-right: none;
     padding-left: 4%;
@@ -78,10 +78,10 @@ body {
 }
 
 .cargo-td-amount {
-    font-family: startrek;
+    font-family: startrek2;
     width: 40%;
     height: 50px;
-    font-size: 120%;
+    font-size: 150%;
     border: 4px ridge rgb(124, 236, 120);
     border-left: none;
     padding-right: 4%;
@@ -92,4 +92,9 @@ body {
 @font-face {
     font-family: startrek;
     src: url("../web/Fonts/TNG_Title.ttf");
+}
+
+@font-face {
+    font-family: startrek2;
+    src: url("../web/Fonts/FINALOLD.TTF");
  }
