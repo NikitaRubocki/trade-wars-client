@@ -1,14 +1,22 @@
 body {
-	background-image: url("../web/Images/stars-1.jpg");
+	background-image: url("../web/Images/stars-2.jpg");
 }
+
 h1 {
-	color: white;
-}
+    font-family: startrek;
+    font-size: 250%;
+    color: whitesmoke;
+    text-shadow: -3px -3px 0 rgb(255, 179, 80), 3px -3px 0 rgb(255, 179, 80), -3px 3px 0 rgb(255, 179, 80), 3px 3px 0 rgb(255, 179, 80);
+    opacity: 75%;
+    margin-left: 1%;
+    /* margin-bottom: 5%; */
+ }
+
 .box {
     display: inline-block
 }
 table, td {
-	border: 2px solid white;
+	border: 3px solid white;
 }
 table {
 	float: left;
@@ -28,10 +36,10 @@ td {
     height: 500px;
     display: grid;
     grid-template-columns: auto;
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
     background-color: grey;
-    padding: 10px;
+    padding: 3px;
 }
 .cargo-title {
     background-color: rgb(59, 59, 59);
@@ -39,7 +47,7 @@ td {
     font-style: bold;
 }
 .cargo-container > div {
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(20, 20, 20);
     text-align: left;
     width: auto;
     height: auto;
