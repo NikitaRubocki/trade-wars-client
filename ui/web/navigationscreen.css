@@ -28,10 +28,10 @@ body {
 	float: left;
 	width: 50%;
     margin: 2%;
-    padding: 10%;
+    margin-right: 10%;
+    background-color: rgba(0, 0, 0, 0.6);
     border: 5px ridge rgb(124, 236, 120);
     border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0px 1px 25px 20px rgb(124, 236, 120);
 }
 
@@ -49,11 +49,10 @@ body {
 }
 
 .cargo {
-    width: 40%;
-    height: 300px;
-    margin-top: 7%;
-    margin-right: 2%;
-    float: right;
+    width: 30%;
+    height: auto;
+    margin-top: 5%;
+    float: left;
     border-collapse: collapse;
     background-color: black;
     
@@ -65,11 +64,24 @@ body {
     color: white
 }
 
-.cargo-td {
+.cargo-td-item {
     width: 40%;
     height: 50px;
     border: 5px ridge rgb(124, 236, 120);
-    padding: 3px;
+    border-right: none;
+    padding-left: 3%;
+    text-align: left;
+    color: white;
+}
+
+.cargo-td-amount {
+    width: 40%;
+    height: 50px;
+    border: 5px ridge rgb(124, 236, 120);
+    border-left: none;
+    padding-right: 3%;
+    text-align: right;
+    color: white;
 }
 
 @font-face {
