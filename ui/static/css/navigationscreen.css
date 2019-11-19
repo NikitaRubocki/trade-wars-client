@@ -1,0 +1,77 @@
+body {
+	background-image: url("http://127.0.0.1:8088/static/images/stars-1.jpg");
+}
+
+.header {
+    font-family: startrek;
+    font-size: 250%;
+    color: whitesmoke;
+    text-shadow: -3px -3px 0 rgb(255, 179, 80), 3px -3px 0 rgb(255, 179, 80), -3px 3px 0 rgb(255, 179, 80), 3px 3px 0 rgb(255, 179, 80);
+    opacity: 75%;
+    margin-left: 1%;
+    width: 30%;
+    float: left;
+}
+
+.status {
+    font-family: startrek;
+    font-size: 200%;
+    float: right;
+    margin-bottom: 2%;
+    width: 50%;
+    height: 60px;
+    border: 3px solid white;
+    color: white;
+}
+
+.box {
+    display: inline-block;
+}
+
+table, td {
+	border: 3px solid white;
+}
+
+table {
+	float: left;
+	width: 50%;
+    margin-right: 5%;
+    margin-top: 2%
+}
+
+td {
+	width: 50px;
+	height: 50px;
+}
+
+
+.cargo-container {
+    width: 40%;
+    height: 300px;
+    margin-top: 5%;
+    margin-right: 3%;
+    display: grid;
+    float: right;
+    grid-template-columns: auto;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    background-color: grey;
+    padding: 3px;
+}
+
+.cargo-title {
+    background-color: rgb(59, 59, 59);
+    width: auto;
+    font-style: bold;
+}
+.cargo-container > div {
+    background-color: rgb(20, 20, 20);
+    text-align: left;
+    width: auto;
+    height: auto;
+}
+
+@font-face {
+    font-family: startrek;
+    src: url("../web/Fonts/TNG_Title.ttf");
+ }

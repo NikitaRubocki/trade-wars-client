@@ -1,0 +1,61 @@
+body {
+   text-align: center;
+   margin: 10%;
+   background-image: url("http://127.0.0.1:8088/static/images/star-trek-1.jpg");
+
+}
+
+h1 {
+   font-family: startrek;
+   font-size: 800%;
+   color: whitesmoke;
+   text-shadow: -10px -10px 0 rgb(255, 179, 80), 10px -10px 0 rgb(255, 179, 80), -10px 10px 0 rgb(255, 179, 80), 10px 10px 0 rgb(255, 179, 80);
+   opacity: 75%;
+   margin-bottom: 5%;
+}
+
+form {
+   display: inline;
+}
+
+input {
+   font-family: startrek;
+   font-size: 150%;
+   color: rgb(124, 236, 120);
+   background: none;
+   border: none;
+   border-bottom: 2px solid rgb(124, 236, 120);
+   padding: .5%;
+   outline: none;
+   
+}
+
+::placeholder {
+   color: rgb(124, 236, 120);
+}
+
+button {
+   font-family: startrek;
+   font-size: 150%;
+   color: aqua;
+   padding: 1%;
+   margin-left: 1%;
+   background: none;
+   border: 2% aqua solid; 
+   border-color: aqua;
+   border-radius: 6%;
+   outline: none
+}
+
+button:hover {
+   box-shadow: 2px 2px 35px 15px aqua;
+   color: whitesmoke;
+   background: rgba(0, 255, 255, 0.63);
+   border-color: rgba(0, 255, 255, 0.43);
+   opacity: 90%;
+}
+
+@font-face {
+   font-family: startrek;
+   src: url("../web/Fonts/TNG_Title.ttf");
+}
