@@ -11,7 +11,7 @@ import (
 func main() {
     mux := http.NewServeMux()
     mux.HandleFunc("/players", welcome)
-    mux.HandleFunc("/navigationscreen", navigate)
+    mux.HandleFunc("/navigation", navigate)
     mux.HandleFunc("/trade", trade)
 
     fileServer := http.FileServer(http.Dir("./ui/static/"))
