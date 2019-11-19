@@ -10,9 +10,12 @@ import (
 
 func main() {
     mux := http.NewServeMux()
-    mux.HandleFunc("/", home)
-    mux.HandleFunc("/snippet", showSnippet)
+    mux.HandleFunc("/players", welcome)
+    mux.HandleFunc("/navigationscreen", showSnippet)
     mux.HandleFunc("/snippet/create", createSnippet)
+
+    fileServer := http.FileServer(http.Dir("./ui/static/"))
+    mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 
     log.Println("Starting server on :8088")
     err := http.ListenAndServe(":8088", mux)
