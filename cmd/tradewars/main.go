@@ -12,7 +12,7 @@ func main() {
     mux := http.NewServeMux()
     mux.HandleFunc("/players", welcome)
     mux.HandleFunc("/navigationscreen", navigate)
-    mux.HandleFunc("/trade", createSnippet)
+    mux.HandleFunc("/trade", trade)
 
     fileServer := http.FileServer(http.Dir("./ui/static/"))
     mux.Handle("/static/", http.StripPrefix("/static", fileServer))
