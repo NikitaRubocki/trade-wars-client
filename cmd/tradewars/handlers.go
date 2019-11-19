@@ -6,8 +6,8 @@ import (
     "log"
 )
 
-func home(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/" {
+func welcome(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/players" {
     	http.NotFound(w, r)
         return
     }
@@ -27,7 +27,18 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 
 func showSnippet(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Display a specific butt..."))
+	ts, err := template.ParseFiles("./ui/web/navigationscreen.html")
+    if err != nil {
+        log.Println(err.Error())
+        http.Error(w, "Internal Server Error", 500)
+        return
+    }
+
+    err = ts.Execute(w, nil)
+    if err != nil {
+        log.Println(err.Error())
+        http.Error(w, "Internal Server Error", 500)
+    }
 }
 
 func createSnippet(w http.ResponseWriter, r *http.Request) {
