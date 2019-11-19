@@ -73,5 +73,5 @@ td {
 
 @font-face {
     font-family: startrek;
-    src: url("../web/Fonts/TNG_Title.ttf");
+    src: url("https://127.0.0.1:8088/static/Fonts/TNG_Title.ttf");
  }
