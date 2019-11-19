@@ -26,7 +26,7 @@ func welcome(w http.ResponseWriter, r *http.Request) {
     }
 }
 
-func showSnippet(w http.ResponseWriter, r *http.Request) {
+func navigate(w http.ResponseWriter, r *http.Request) {
 	ts, err := template.ParseFiles("./ui/web/navigationscreen.html")
     if err != nil {
         log.Println(err.Error())
