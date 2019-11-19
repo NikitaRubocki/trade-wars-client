@@ -10,6 +10,7 @@ import (
 
 func main() {
     mux := http.NewServeMux()
+    mux.HandleFunc("/", redirect)
     mux.HandleFunc("/players", welcome)
     mux.HandleFunc("/map", starMap)
     mux.HandleFunc("/trade", trade)
@@ -18,7 +19,7 @@ func main() {
     fileServer := http.FileServer(http.Dir("./ui/static/"))
     mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 
-    log.Println("Starting server on :8088")
-    err := http.ListenAndServe(":8088", mux)
+    log.Println("Starting server on :4000")
+    err := http.ListenAndServe(":4000", mux)
     log.Fatal(err)
 }

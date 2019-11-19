@@ -52,3 +52,7 @@ func trade(w http.ResponseWriter, r *http.Request) {
 func chat(w http.ResponseWriter, r *http.Request) {
     return
 }
+
+func redirect(w http.ResponseWriter, r *http.Request) {
+    http.Redirect(w, r, "http://127.0.0.1:4000/players", 303)
+}
