@@ -2,7 +2,6 @@ body {
    text-align: center;
    margin: 10%;
    background-image: url("http://127.0.0.1:8088/static/images/star-trek-1.jpg");
-
 }
 
 h1 {
@@ -10,7 +9,7 @@ h1 {
    font-size: 800%;
    color: whitesmoke;
    text-shadow: -10px -10px 0 rgb(255, 179, 80), 10px -10px 0 rgb(255, 179, 80), -10px 10px 0 rgb(255, 179, 80), 10px 10px 0 rgb(255, 179, 80);
-   opacity: 75%;
+   opacity: 85%;
    margin-bottom: 5%;
 }
 
@@ -27,7 +26,6 @@ input {
    border-bottom: 2px solid rgb(124, 236, 120);
    padding: .5%;
    outline: none;
-   
 }
 
 ::placeholder {
