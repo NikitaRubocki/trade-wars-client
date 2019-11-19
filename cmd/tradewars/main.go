@@ -11,7 +11,7 @@ import (
 func main() {
     mux := http.NewServeMux()
     mux.HandleFunc("/players", welcome)
-    mux.HandleFunc("/navigation", navigate)
+    mux.HandleFunc("/map", starMap)
     mux.HandleFunc("/trade", trade)
     mux.HandleFunc("/chat", chat)
 
