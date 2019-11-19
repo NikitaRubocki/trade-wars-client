@@ -1,7 +1,7 @@
 body {
    text-align: center;
    margin: 10%;
-   background-image: url("http://127.0.0.1:8088/static/images/star-trek-1.jpg");
+   background-image: url("http://127.0.0.1:4000/static/images/star-trek-1.jpg");
 }
 
 h1 {
@@ -55,5 +55,5 @@ button:hover {
 
 @font-face {
    font-family: startrek;
-   src: url("https://127.0.0.1:8088/static/Fonts/TNG_Title.ttf");
+   src: url("https://127.0.0.1:4000/static/Fonts/TNG_Title.ttf");
 }
