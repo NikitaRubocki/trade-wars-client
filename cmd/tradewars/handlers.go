@@ -7,8 +7,8 @@ import (
 )
 
 func welcome(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/players" {
-    	http.NotFound(w, r)
+	if r.Method != http.MethodGet && r.Method != http.MethodPost {
+        http.Error(w, "Method Not Allowed", 405)
         return
     }
 
@@ -47,4 +47,8 @@ func trade(w http.ResponseWriter, r *http.Request) {
         return
     }
 	w.Write([]byte("Create a new butt..."))
+}
+
+func chat(w http.ResponseWriter, r *http.Request) {
+    return
 }
