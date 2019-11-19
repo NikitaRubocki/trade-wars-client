@@ -91,11 +91,11 @@ body {
 
 @font-face {
     font-family: startrek;
-    src: url("https://127.0.0.1:4000/static/fonts/TNG_Title.ttf");
+    src: url("http://127.0.0.1:4000/static/fonts/TNG_Title.ttf");
  }
 
 @font-face {
     font-family: startrek2;
-    src: url("https://127.0.0.1:4000/static/fonts/FINALOLD.TTF");
+    src: url("http://127.0.0.1:4000/static/fonts/FINALOLD.TTF");
  }
 
