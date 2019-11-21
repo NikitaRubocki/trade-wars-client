@@ -7,9 +7,13 @@ import (
     "log"
     "net/http"
     "os"
+    "github.com/joho/godotenv"
 )
 
 func main() {
+    
+    godotenv.Load()
+
     mux := http.NewServeMux()
     mux.HandleFunc("/", redirect)
     mux.HandleFunc("/players", welcome)
