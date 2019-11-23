@@ -7,7 +7,7 @@ import (
     "fmt"
 )
 
-func welcome(w http.ResponseWriter, r *http.Request) {
+func playersHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println("inside welcome")
 	if r.Method != http.MethodGet && r.Method != http.MethodPost {
         http.Error(w, "Method Not Allowed", 405)
@@ -40,11 +40,9 @@ func welcome(w http.ResponseWriter, r *http.Request) {
         http.Redirect(w, r, "/map", http.StatusSeeOther)
         
     }
-
-    
 }
 
-func starMap(w http.ResponseWriter, r *http.Request) {
+func mapHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println("inside starmap")
 	ts, err := template.ParseFiles("./ui/web/navigationscreen.html")
     if err != nil {
@@ -60,7 +58,7 @@ func starMap(w http.ResponseWriter, r *http.Request) {
     }
 }
 
-func trade(w http.ResponseWriter, r *http.Request) {
+func tradeHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method Not Allowed", 405)
         return
@@ -68,7 +66,7 @@ func trade(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Create a new butt..."))
 }
 
-func chat(w http.ResponseWriter, r *http.Request) {
+func chatHandler(w http.ResponseWriter, r *http.Request) {
     return
 }
 

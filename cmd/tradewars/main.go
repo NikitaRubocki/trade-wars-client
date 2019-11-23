@@ -18,10 +18,10 @@ func main() {
 
     mux := http.NewServeMux()
     mux.HandleFunc("/", redirect)
-    mux.HandleFunc("/players", welcome)
-    mux.HandleFunc("/map", starMap)
-    mux.HandleFunc("/trade", trade)
-    mux.HandleFunc("/chat", chat)
+    mux.HandleFunc("/players", playersHandler)
+    mux.HandleFunc("/map", mapHandler)
+    mux.HandleFunc("/trade", tradeHandler)
+    mux.HandleFunc("/chat", chatHandler)
 
     fileServer := http.FileServer(http.Dir("./ui/static/"))
     mux.Handle("/static/", http.StripPrefix("/static", fileServer))
