@@ -36,8 +36,9 @@ func welcome(w http.ResponseWriter, r *http.Request) {
             http.Error(w, "Internal Server Error", 500)
         }
         callsign := r.Form.Get("callsign")
-        
         fmt.Println(callsign)
+        http.Redirect(w, r, "/map", http.StatusSeeOther)
+        
     }
 
     
