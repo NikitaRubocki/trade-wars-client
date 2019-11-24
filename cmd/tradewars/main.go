@@ -13,7 +13,6 @@ import (
 )
 
 func main() {
-    
     godotenv.Load()
 
     mux := http.NewServeMux()
@@ -26,10 +25,7 @@ func main() {
     fileServer := http.FileServer(http.Dir("./ui/static/"))
     mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 
-    port, ok := os.LookupEnv("PORT")
-    if ok == false {
-        port = "4000"
-    }
+    port := os.Getenv("PORT")
     err := http.ListenAndServe(":"+port, mux)
     log.Fatal(err)
 }
