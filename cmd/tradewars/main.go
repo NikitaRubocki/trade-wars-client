@@ -26,6 +26,7 @@ func main() {
     mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 
     port := os.Getenv("PORT")
+    log.Println("Starting server on port :"+PORT+"...")
     err := http.ListenAndServe(":"+port, mux)
     log.Fatal(err)
 }
