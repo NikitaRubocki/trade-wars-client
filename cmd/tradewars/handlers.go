@@ -90,5 +90,9 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func redirect(w http.ResponseWriter, r *http.Request) {
-    http.Redirect(w, r, "http://trade-wars-client.herokuapp.com/players", 303)
+    if r.URL.Path == "/" {
+        http.Redirect(w, r, "/players", 303)
+    } else {
+        return
+    }
 }

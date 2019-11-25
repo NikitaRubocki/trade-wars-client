@@ -1,5 +1,5 @@
 body {
-	background-image: url("http://127.0.0.1:4000/static/images/stars-1.jpg");
+	background-image: url("/static/images/stars-1.jpg");
 }
 
 .header {
@@ -91,11 +91,11 @@ body {
 
 @font-face {
     font-family: startrek;
-    src: url("http://127.0.0.1:4000/static/fonts/TNG_Title.ttf");
+    src: url("/static/fonts/TNG_Title.ttf");
  }
 
 @font-face {
     font-family: startrek2;
-    src: url("http://127.0.0.1:4000/static/fonts/FINALOLD.TTF");
+    src: url("/static/fonts/FINALOLD.TTF");
  }
 
