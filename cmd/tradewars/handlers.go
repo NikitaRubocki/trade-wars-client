@@ -91,6 +91,12 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
 
 func redirect(w http.ResponseWriter, r *http.Request) {
     if r.URL.Path == "/" {
+        var cookie, err = r.Cookie("callsign")
+        if err == nil {
+            log.Println(cookie)
+            http.Redirect(w, r, "/map", http.StatusSeeOther) 
+            return
+        }
         http.Redirect(w, r, "/players", 303)
     } else {
         return
