@@ -52,7 +52,7 @@ func mapHandler(w http.ResponseWriter, r *http.Request) {
     var cookie, err = r.Cookie("callsign")
     if err != nil {
         log.Println(err.Error())
-        http.Error(w, "Internal Server Error: Could not obtain callsign from cookie", 500)
+        http.Redirect(w, r, "/players", http.StatusSeeOther) 
         return
     }
     callsign := cookie.Value
