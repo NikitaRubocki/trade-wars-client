@@ -2,15 +2,14 @@ body {
     background-image: url("/static/images/star-trek-2.jpg");
     font:12px arial;
     color: #222;
-    text-align:center;
-    padding:35px; 
+    
 }
 
-.header {
+#header {
     font-family: startrek;
-    font-size: 350%;
+    font-size: 400%;
     color: whitesmoke;
-    text-shadow: -4px -4px 0 rgb(255, 179, 80), 4px -4px 0 rgb(255, 179, 80), -4px 4px 0 rgb(255, 179, 80), 4px 4px 0 rgb(255, 179, 80);
+    text-shadow: -3.5px -3.5px 0 rgb(255, 179, 80), 3.5px -3.5px 0 rgb(255, 179, 80), -3.5px 3.5px 0 rgb(255, 179, 80), 3.5px 3.5px 0 rgb(255, 179, 80);
     opacity: 85%;
     margin: .5%;
     width: 30%;
@@ -29,16 +28,16 @@ a {
   
     a:hover { text-decoration:underline; }
   
-#wrapper, #loginform {
-    margin:0 auto;
+#wrapper{
+    margin: 3%;
+    margin-right: 30%;
+    float: right;
     padding-bottom:25px;
     background:#EBF4FB;
-    width:504px;
-    border:1px solid #ACD8F0; }
-  
-#loginform { padding-top:18px; }
-  
-#loginform p { margin: 5px; }
+    width: 503.5px;
+    border: 1px solid #ACD8F0; 
+    text-align:center; 
+}
   
 #chatbox {
     text-align:left;
