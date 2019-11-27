@@ -4,7 +4,7 @@ import (
     "net/http"
     "html/template"
     "log"
-    "fmt"
+    //"fmt"
     "time"
     "github.com/gorilla/websocket"
 )
@@ -57,7 +57,7 @@ func mapHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
     callsign := cookie.Value
-    fmt.Println(callsign)
+    //fmt.Println(callsign)
 
 	ts, err := template.ParseFiles("./ui/web/navigationscreen.html")
     if err != nil {
@@ -87,6 +87,24 @@ func tradeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func chatHandler(w http.ResponseWriter, r *http.Request) {
+    ts, err := template.ParseFiles("./ui/web/chatscreen.html")
+    if err != nil {
+        log.Println(err.Error())
+        http.Error(w, "Internal Server Error", 500)
+        return
+    }
+
+    err = ts.Execute(w, nil)
+    if err != nil {
+        log.Println(err.Error())
+        http.Error(w, "Internal Server Error", 500)
+    }
+
+    go messageHandler(w, r)
+
+}
+
+func messageHandler(w http.ResponseWriter, r *http.Request) {
     // Define our message object
     type Message struct {
         Email    string `json:"email"`
