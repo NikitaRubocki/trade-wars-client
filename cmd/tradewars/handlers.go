@@ -96,7 +96,7 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
     data := struct {
         Callsign string
     }{
-        Callsign: "Welcome "+callsign+"!",
+        Callsign: callsign,
     }
 
     ts, err := template.ParseFiles("./ui/web/chatscreen.html")
