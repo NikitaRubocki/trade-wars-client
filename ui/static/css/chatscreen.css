@@ -66,3 +66,13 @@ a {
 .logout { float:right; }
   
 .msgln { margin:0 0 2px 0; }
+
+@font-face {
+    font-family: startrek;
+    src: url("/static/fonts/TNG_Title.ttf");
+ }
+
+@font-face {
+    font-family: startrek2;
+    src: url("/static/fonts/FINALOLD.TTF");
+ }
