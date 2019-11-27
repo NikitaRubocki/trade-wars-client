@@ -31,6 +31,10 @@ body {
     padding: 1%;
 }
 
+.spaceship {
+    position: relative;
+}
+
 .grid {
 	float: left;
 	width: 50%;
