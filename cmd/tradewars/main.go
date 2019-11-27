@@ -30,3 +30,11 @@ func main() {
     err := http.ListenAndServe(":"+port, mux)
     log.Fatal(err)
 }
+
+// strings.Contains(r.Header.Get("Accept"), "json"){
+//     log("JSON REQUEST")
+//     w.Header().Set("Content-Type", "application/json")
+//     w.Write([]byte(...))
+// } else {deal with cookie}
+
+// <script src"/assest.js.main.js" type="text/javascipt">

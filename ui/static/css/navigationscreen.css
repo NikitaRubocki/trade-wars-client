@@ -25,6 +25,11 @@ body {
     color: aqua;
     background-color: rgba(0, 0, 0, 0.9);
 }
+/* # is used for id */
+#callsign {
+    font-family: startrek2;
+    padding: 1%;
+}
 
 .grid {
 	float: left;
