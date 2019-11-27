@@ -9,13 +9,13 @@ import (
 )
 
 func playersHandler(w http.ResponseWriter, r *http.Request) {
-    fmt.Println("inside playerHandler")
+    //fmt.Println("inside playerHandler")
 	if r.Method != http.MethodGet && r.Method != http.MethodPost {
         http.Error(w, "Method Not Allowed", 405)
         return
     }
 
-    fmt.Println("r.Method: ", r.Method)
+    //fmt.Println("r.Method: ", r.Method)
     if r.Method == http.MethodGet {
         ts, err := template.ParseFiles("./ui/web/welcome.html")
         if err != nil {
@@ -48,7 +48,7 @@ func playersHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func mapHandler(w http.ResponseWriter, r *http.Request) {
-    fmt.Println("inside mapHandler")
+    //fmt.Println("inside mapHandler")
     var cookie, err = r.Cookie("callsign")
     if err != nil {
         log.Println(err.Error())

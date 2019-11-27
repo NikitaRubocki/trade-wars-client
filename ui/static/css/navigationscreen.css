@@ -32,7 +32,9 @@ body {
 }
 
 .spaceship {
-    position: relative;
+    position: absolute;
+    width: 7%;
+    height: 10%;
 }
 
 .grid {
