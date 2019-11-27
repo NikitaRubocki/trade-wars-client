@@ -3,7 +3,6 @@
 
 package main
 
-//github.com/gorilla/mux
 
 import (
     "log"
