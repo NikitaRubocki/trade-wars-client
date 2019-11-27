@@ -1,7 +1,6 @@
 body {
     background-image: url("/static/images/star-trek-2.jpg");
-    font:12px arial;
-    color: #222;
+    /* color: #222; */
     
 }
 
@@ -9,60 +8,92 @@ body {
     font-family: startrek;
     font-size: 400%;
     color: whitesmoke;
-    text-shadow: -3.5px -3.5px 0 rgb(255, 179, 80), 3.5px -3.5px 0 rgb(255, 179, 80), -3.5px 3.5px 0 rgb(255, 179, 80), 3.5px 3.5px 0 rgb(255, 179, 80);
+    text-shadow: -4px -4px 0 rgb(255, 179, 80), 4px -4px 0 rgb(255, 179, 80), -4px 4px 0 rgb(255, 179, 80), 4px 4px 0 rgb(255, 179, 80);
     opacity: 85%;
     margin: .5%;
     width: 30%;
     float: left;
 }
 
-form, p, span {
-    margin:0;
-    padding:0; }
-  
-input { font:12px arial; }
-  
-a {
-    color:#0000FF;
-    text-decoration:none; }
-  
-    a:hover { text-decoration:underline; }
-  
+/* wraps entire chat box */
 #wrapper{
-    margin: 3%;
+    margin: 1%;
     margin-right: 30%;
     float: right;
-    padding-bottom:25px;
+    padding-bottom: 3%;
     background:#EBF4FB;
-    width: 503.5px;
+    width: 504px;
     border: 1px solid #ACD8F0; 
-    text-align:center; 
+    text-align: center; 
+    font-family: startrek;
+}
+
+/* top of chat box */
+#menu { 
+    padding: 1% 6%; 
+    font-size: 120%;
+}
+
+.welcome { 
+    float: left; 
 }
   
+.logout { 
+    float: right; 
+}
+
+a {
+    color: #0000FF;
+    text-decoration: none; 
+}
+  
+a:hover { text-decoration: underline; }
+
+/* main chat screen */
 #chatbox {
     text-align:left;
-    margin:0 auto;
-    margin-bottom:25px;
-    padding:10px;
+    font-size: 150%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    padding: 2%;
     background:#fff;
-    height:270px;
-    width:430px;
-    border:1px solid #ACD8F0;
-    overflow:auto; }
+    width: 85%;
+    height: 270px;
+    border: 1px solid #ACD8F0;
+    overflow:auto; 
+}
   
+/* message and submit */
+/* #msgarea {
+    /* margin: 0;
+    padding: 0;  
+}*/
+
 #usermsg {
-    width:395px;
-    border:1px solid #ACD8F0; }
+    vertical-align: top;
+    width: 78%;
+    border: 1px solid #ACD8F0; 
+    font-family: startrek2;
+    font-size: 150%;
+}
   
-#submit { width: 60px; }
+#submitmsg { 
+    vertical-align: top;
+    width: 10%; 
+    height: max-content;
+    font-family: startrek;
+    font-size:90%;
+    padding: .5%;
+    text-align: center;
+}
   
-.error { color: #ff0000; }
+.error { 
+    color: #ff0000; 
+}
   
-#menu { padding:12.5px 25px 12.5px 25px; }
+
   
-.welcome { float:left; }
-  
-.logout { float:right; }
+
   
 .msgln { margin:0 0 2px 0; }
 
