@@ -57,7 +57,11 @@ func mapHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
     callsign := cookie.Value
-    //fmt.Println(callsign)
+    data := struct {
+        Callsign string
+    }{
+        Callsign: "Welcome "+callsign+"!",
+    }
 
 	ts, err := template.ParseFiles("./ui/web/navigationscreen.html")
     if err != nil {
@@ -66,11 +70,6 @@ func mapHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    data := struct {
-        Callsign string
-    }{
-        Callsign: "Welcome "+callsign+"!",
-    }
     err = ts.Execute(w, data)
     if err != nil {
         log.Println(err.Error())
@@ -87,6 +86,19 @@ func tradeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func chatHandler(w http.ResponseWriter, r *http.Request) {
+    var cookie, err = r.Cookie("callsign")
+    if err != nil {
+        log.Println(err.Error())
+        http.Redirect(w, r, "/players", http.StatusSeeOther) 
+        return
+    }
+    callsign := cookie.Value
+    data := struct {
+        Callsign string
+    }{
+        Callsign: "Welcome "+callsign+"!",
+    }
+
     ts, err := template.ParseFiles("./ui/web/chatscreen.html")
     if err != nil {
         log.Println(err.Error())
@@ -94,13 +106,13 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    err = ts.Execute(w, nil)
+    err = ts.Execute(w, data)
     if err != nil {
         log.Println(err.Error())
         http.Error(w, "Internal Server Error", 500)
     }
 
-    go messageHandler(w, r)
+    //go messageHandler(w, r)
 
 }
 
