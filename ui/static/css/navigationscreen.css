@@ -37,7 +37,7 @@ body {
     height: 100%;
 }
 
-.grid {
+#grid {
 	float: left;
 	width: 50%;
     margin: 2%;
