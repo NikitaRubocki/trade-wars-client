@@ -13,7 +13,7 @@
     <div class="status">Status Messages
         <div id="callsign">{{.Callsign}}</div>
     </div>
-    <table class="grid">
+    <table id="grid">
         <caption class="grid-caption">Space Grid</caption>
         <tr>
             <td class="grid-td"></td>
@@ -55,7 +55,7 @@
             <td class="grid-td"></td>
             <td class="grid-td"></td>
             <td class="grid-td"></td>
-            <td class="grid-td"><img class="spaceship" src=/static/images/spaceship.png></td>
+            <td class="grid-td"></td>
             <td class="grid-td"></td>
             <td class="grid-td"></td>
             <td class="grid-td"></td>
@@ -151,8 +151,15 @@
             <td class="cargo-td-item"></td>
             <td class="cargo-td-amount"></td>
         </tr>
-
-
     </table>
+    <script>alert("hi there");</script>
+    <script>alert(document.getElementById("grid").rows[3].cells[3].innerHTML);</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document.getElementById("grid").rows[3].cells[3]).html("<td class="grid-td"><img class="spaceship" src=/static/images/spaceship.png></td>")
+        }
+    </script>
 </body>
 </html>
