@@ -13,7 +13,7 @@
     <div class="status">Status Messages
         <div id="callsign">{{.Callsign}}</div>
     </div>
-    <table class="grid">
+    <table id="grid">
         <caption class="grid-caption">Space Grid</caption>
         <tr>
             <td class="grid-td"></td>
@@ -151,8 +151,8 @@
             <td class="cargo-td-item"></td>
             <td class="cargo-td-amount"></td>
         </tr>
-
-
     </table>
+    <script>alert("hi there");</script>
+    <script>alert(document.getElementById("grid").rows[0].cells[0].innerHTML);</script>
 </body>
 </html>
