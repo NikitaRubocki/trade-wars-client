@@ -51,8 +51,9 @@ a:hover { text-decoration: underline; }
 
 /* main chat screen */
 #chatbox {
-    text-align:left;
-    font-size: 150%;
+    text-align: left;
+    font-family: startrek2;
+    font-size: 120%;
     margin: 0 auto;
     margin-bottom: 5%;
     padding: 2%;
@@ -61,7 +62,7 @@ a:hover { text-decoration: underline; }
     width: 85%;
     height: 270px;
     border: 2.5px solid aqua;
-    overflow:auto; 
+    overflow: auto; 
 }
   
 /* message and submit */
@@ -73,7 +74,7 @@ a:hover { text-decoration: underline; }
     width: 77%;
     border: 2.5px solid aqua; 
     font-family: startrek2;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 ::placeholder {
@@ -82,10 +83,10 @@ a:hover { text-decoration: underline; }
   
 #submitmsg { 
     vertical-align: top;
-    width: 10%; 
+    width: 11%; 
     font-family: startrek;
-    font-size: 90%;
-    padding: .5%;
+    font-size: 100%;
+    padding: 1%;
     text-align: center;
 }
   

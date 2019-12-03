@@ -23,13 +23,23 @@
         <input name="usermsg" type="text" id="usermsg" size="63" />
         <input name="submitmsg" type="submit"  id="submitmsg" value="Send!" />
     </form> -->
-    <form id="msgarea" name="message" action="">
-        <!-- <input name="usermsg" type="text" id="usermsg" size="63" /> -->
+    <form id="msgarea" action="/chat" method="POST">
         <input type="text" name="usermsg" id="usermsg" placeholder="Message" />
-        <button type="submit" id="submitmsg" onclick="hello()">Send!</button>
+        <button type="submit" id="submitmsg" onclick="sendMsg()">Send!</button>
     </form>
 </div>
 <script type="text/javascript" src="/static/js/chat.js"></script>
-<!-- <script>alert("hello");</script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function sendMsg() {
+    var chatLog = document.getElementById("chatbox").innerHTML;
+    var msg = document.getElementById("usermsg").value;
+    if (msg != '') {
+        alert(chatLog+"\n"+msg);
+        chatLog.text(chatLog+"\n"+"<p>hello</p");
+    }
+}
+</script> -->
+
 </body>
 </html>
