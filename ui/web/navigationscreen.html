@@ -13,7 +13,7 @@
     <div class="status">Status Messages
         <div id="callsign">{{.Callsign}}</div>
     </div>
-    <table class="grid">
+    <table id="grid">
         <caption class="grid-caption">Space Grid</caption>
         <tr>
             <td class="grid-td"></td>
@@ -153,6 +153,6 @@
         </tr>
     </table>
     <script>alert("hi there");</script>
-    <script>alert(document.getElementByClass("grid").rows[3].cells[3].innerHTML);</script>
+    <script>alert(document.getElementById("grid").rows[3].cells[3].innerHTML);</script>
 </body>
 </html>
