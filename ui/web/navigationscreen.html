@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body onkeydown="placeShip()">
+<body onkeypress="decodeKeyPress(event)" >
 
     <div class="header">TradeWars!</div>
     <button onclick="window.location.href = '/chat'">Chat Screen</button>
@@ -163,6 +163,40 @@
  --><script>
         function placeShip(){
             $(document.getElementById("grid").rows[3].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
+        }
+    </script>
+    <script>
+        // var coords = [3, 3]
+
+        function decodeKeyPress(event){
+            var keyCode = event.which || event.keyCode;
+            if (keyCode == 119) {
+                moveShipUp()
+            } else if (keyCode == 115) {
+                moveShipDown()
+            } else if (keyCode == 100) {
+                moveShipRight()
+            } else if (keyCode == 97) {
+                moveShipLeft()
+            }
+        }
+
+        function moveShipUp() {
+            //coords[0] -= 1
+            //say rows[coords[0]].cells[coords[1]]
+            $(document.getElementById("grid").rows[2].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
+        }
+
+        function moveShipDown() {
+            $(document.getElementById("grid").rows[4].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
+        }
+
+        function moveShipLeft() {
+            $(document.getElementById("grid").rows[3].cells[2]).html("<img class='spaceship' src=/static/images/spaceship.png>");
+        }
+
+        function moveShipRight() {
+            $(document.getElementById("grid").rows[3].cells[4]).html("<img class='spaceship' src=/static/images/spaceship.png>");
         }
     </script>
 </body>
