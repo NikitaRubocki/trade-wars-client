@@ -155,10 +155,15 @@
     <script>alert("hi there");</script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function placeShip(){
+<!--     <script>
+        $(document).ready(function(){
             $(document.getElementById("grid").rows[3].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
         })
+    </script>
+ --><script>
+        function placeShip(){
+            $(document.getElementById("grid").rows[3].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
+        }
     </script>
 </body>
 </html>
