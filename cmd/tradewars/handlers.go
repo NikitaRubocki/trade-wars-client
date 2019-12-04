@@ -126,21 +126,20 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Internal Server Error", 500)
     }
 
-    connectionHandler(w, r)
-
 }
 
-func connectionHandler(w http.ResponseWriter, r *http.Request) {
+func wsHandler(w http.ResponseWriter, r *http.Request) {
     // Upgrade initial GET request to a websocket
 	ws, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-	// Make sure we close the connection when the function returns
+    
+    // Make sure we close the connection when the function returns
 	defer ws.Close()
 
 	// Register our new client
-	clients[ws] = true
+    clients[ws] = true
 
 	for {
 		var msg Message
@@ -154,7 +153,6 @@ func connectionHandler(w http.ResponseWriter, r *http.Request) {
 		// Send the newly received message to the broadcast channel
 		broadcast <- msg
     }
-
 }
 
 func messageHandler() {
