@@ -28,6 +28,8 @@ func main() {
     log.Println("Starting server on port :"+port+"...")
     err := http.ListenAndServe(":"+port, mux)
     log.Fatal(err)
+
+    go messageHandler()
 }
 
 // strings.Contains(r.Header.Get("Accept"), "json"){
