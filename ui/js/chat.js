@@ -5,8 +5,13 @@ function sendMsg() {
         // alert(msg);
         // alert(chatLog);
         // alert(chatLog+"\n"+msg);
-        chatLog = msg;
+        
     }
 }
-    
+// var socket = new WebSocket(url)
+// var update = func(){
+//     example socket.onmessage = function(event){
+//         update html elements
+//     }
+// }
 
