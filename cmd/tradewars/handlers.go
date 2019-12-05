@@ -49,7 +49,6 @@ func playersHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func mapHandler(w http.ResponseWriter, r *http.Request) {
-    //fmt.Println("inside mapHandler")
     var cookie, err = r.Cookie("callsign")
     if err != nil {
         log.Println(err.Error())
