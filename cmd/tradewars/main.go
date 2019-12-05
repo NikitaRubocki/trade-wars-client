@@ -21,6 +21,7 @@ func main() {
     mux.HandleFunc("/trade", tradeHandler)
     mux.HandleFunc("/chat", chatHandler)
     mux.HandleFunc("/ws", wsHandler)
+    // mux.HandleFunc("/newMsg", writeHandler)
 
     fileServer := http.FileServer(http.Dir("./ui/static/"))
     mux.Handle("/static/", http.StripPrefix("/static", fileServer))
