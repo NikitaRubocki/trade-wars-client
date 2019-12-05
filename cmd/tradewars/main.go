@@ -20,6 +20,8 @@ func main() {
     mux.HandleFunc("/map", mapHandler)
     mux.HandleFunc("/trade", tradeHandler)
     mux.HandleFunc("/chat", chatHandler)
+    mux.HandleFunc("/ws", wsHandler)
+    mux.HandleFunc("/newMsg", writeHandler)
 
     fileServer := http.FileServer(http.Dir("./ui/static/"))
     mux.Handle("/static/", http.StripPrefix("/static", fileServer))
@@ -28,6 +30,8 @@ func main() {
     log.Println("Starting server on port :"+port+"...")
     err := http.ListenAndServe(":"+port, mux)
     log.Fatal(err)
+
+    go messageHandler()
 }
 
 // strings.Contains(r.Header.Get("Accept"), "json"){

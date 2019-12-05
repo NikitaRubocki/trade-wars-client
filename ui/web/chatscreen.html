@@ -14,32 +14,37 @@
     <div id="menu">
         <p class="welcome">Welcome, {{.Callsign}}!<b></b></p>
         <p class="logout"><a id="exit" href="#" onclick="window.location.href = '/map'">Exit Chat</a></p>
-        <!-- <div style="clear:both"></div> -->
     </div>
      
     <div id="chatbox"></div>
-     
-    <!-- <form id="msgarea" name="message" action="">
-        <input name="usermsg" type="text" id="usermsg" size="63" />
-        <input name="submitmsg" type="submit"  id="submitmsg" value="Send!" />
-    </form> -->
+    
     <form id="msgarea" action="/chat" method="POST">
         <input type="text" name="usermsg" id="usermsg" placeholder="Message" />
         <button type="submit" id="submitmsg" onclick="sendMsg()">Send!</button>
     </form>
 </div>
-<script type="text/javascript" src="/static/js/chat.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
+<!-- <script type="text/javascript" src="/static/js/chat.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var chatLog = document.getElementById("chatbox");
+    var usermsg = document.getElementById("usermsg");
+    var ws = new WebSocket("ws://localhost:4000/ws");
+
     function sendMsg() {
-    var chatLog = document.getElementById("chatbox").innerHTML;
-    var msg = document.getElementById("usermsg").value;
-    if (msg != '') {
-        alert(chatLog+"\n"+msg);
-        chatLog.text(chatLog+"\n"+"<p>hello</p");
-    }
-}
-</script> -->
+        alert("button clicked")
+        $.ajax("/newMsg")
+    };
+
+    var update = function(){
+        ws.onmessage = function (event) {
+            alert("This worked!")
+            // var longlatArr = event.data.split(" ");
+            // long.textContent = longlatArr[1].toString();
+            // lat.textContent = longlatArr[0].toString();
+        }
+    };
+
+</script>
 
 </body>
 </html>
