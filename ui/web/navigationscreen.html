@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body onkeypress="decodeKeyPress(event)" >
+<body onkeypress="decodeKeyPress(event)">
 
     <div class="header">TradeWars!</div>
     <button onclick="window.location.href = '/chat'">Chat Screen</button>
@@ -152,7 +152,6 @@
             <td class="cargo-td-amount"></td>
         </tr>
     </table>
-    <script>alert("hi there");</script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--     <script>
@@ -160,43 +159,52 @@
             $(document.getElementById("grid").rows[3].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
         })
     </script>
- --><script>
+ -->
+    <script>
+        currentCoords = [3, 3]
+
         function placeShip(){
             $(document.getElementById("grid").rows[3].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
         }
-    </script>
-    <script>
-        var coords = [3, 3]
 
         function decodeKeyPress(event){
             var keyCode = event.which || event.keyCode;
             if (keyCode == 119) {
-                moveShipUp()
+                moveShip([currentCoords[0]-1, currentCoords[1]])
             } else if (keyCode == 115) {
-                moveShipDown()
+                moveShip([currentCoords[0]+1, currentCoords[1]])
             } else if (keyCode == 100) {
-                moveShipRight()
+                moveShip([currentCoords[0], currentCoords[1]+1])
             } else if (keyCode == 97) {
-                moveShipLeft()
+                moveShip([currentCoords[0], currentCoords[1]-1])
             }
         }
 
-        function moveShipUp() {
-            coords[0] -= 1
-            $(document.getElementById("grid").rows[coords[0]].cells[coords[1]]).html("<img class='spaceship' src=/static/images/spaceship.png>");
+        // function updateServer(coords){
+        //     const http = new XMLHttpRequest();
+        //     const url ='http://trade-wars-client.herokuapp.com/map';
+        //     const updatedCoords = coords
+        //     Http.open("POST", url);
+        //     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        //     Http.send(updatedCoords);
+        // }
+
+        function updateCoords(newCoords){
+            if (newCoords[0] > 9 || newCoords[1] > 9 || newCoords[0] < 0 || newCoords[1] < 0){
+                return
+            }
+            currentCoords = newCoords
         }
 
-        function moveShipDown() {
-            $(document.getElementById("grid").rows[4].cells[3]).html("<img class='spaceship' src=/static/images/spaceship.png>");
+        function moveShip(newCoords) {
+            //updateServer(currentCoords)
+            //Remove the visual ship
+            $(document.getElementById("grid").rows[currentCoords[0]].cells[currentCoords[1]]).html("<p></p>");
+            updateCoords(newCoords)
+            //Redraw the ship
+            $(document.getElementById("grid").rows[currentCoords[0]].cells[currentCoords[1]]).html("<img class='spaceship' src=/static/images/spaceship.png>");
         }
-
-        function moveShipLeft() {
-            $(document.getElementById("grid").rows[3].cells[2]).html("<img class='spaceship' src=/static/images/spaceship.png>");
-        }
-
-        function moveShipRight() {
-            $(document.getElementById("grid").rows[3].cells[4]).html("<img class='spaceship' src=/static/images/spaceship.png>");
-        }
+        placeShip()
     </script>
 </body>
 </html>
