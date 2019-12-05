@@ -112,24 +112,18 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
     }{
         Callsign: callsign,
     }
-    fmt.Println(r.Method)
-    if r.Method == http.MethodGet {
-        ts, err := template.ParseFiles("./ui/web/chatscreen.html")
-        if err != nil {
-            log.Println(err.Error())
-            http.Error(w, "Internal Server Error", 500)
-            return
-        }
-
-        err = ts.Execute(w, data)
-        if err != nil {
-            log.Println(err.Error())
-            http.Error(w, "Internal Server Error", 500)
-        }
-    }else if r.Method == http.MethodPost {
-        writeHandler(w, r)
+    ts, err := template.ParseFiles("./ui/web/chatscreen.html")
+    if err != nil {
+        log.Println(err.Error())
+        http.Error(w, "Internal Server Error", 500)
+        return
     }
 
+    err = ts.Execute(w, data)
+    if err != nil {
+        log.Println(err.Error())
+        http.Error(w, "Internal Server Error", 500)
+    }
 }
 
 func wsHandler(w http.ResponseWriter, r *http.Request) {
@@ -148,18 +142,18 @@ func wsHandler(w http.ResponseWriter, r *http.Request) {
 
 func writeHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println("inside writeHandler")
-    err := r.ParseForm()
-        if err != nil {
-            log.Println(err.Error())
-            http.Error(w, "Internal Server Error", 500)
-        }
-    fmt.Println("past parseform")
-    msg := Message{r.Form.Get("usermsg")}
-    fmt.Println("past form.get")
-    fmt.Println("Message: ")
-    fmt.Println(msg)
-    broadcast <- msg
-    fmt.Println("end of function")
+    // err := r.ParseForm()
+    //     if err != nil {
+    //         log.Println(err.Error())
+    //         http.Error(w, "Internal Server Error", 500)
+    //     }
+    // fmt.Println("past parseform")
+    // msg := Message{r.Form.Get("usermsg")}
+    // fmt.Println("past form.get")
+    // fmt.Println("Message: ")
+    // fmt.Println(msg)
+    // broadcast <- msg
+    // fmt.Println("end of function")
 }
 
 
